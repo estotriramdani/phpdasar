@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // datatable = [
+      //   {
+      //     field2: 2,
+      //     field3: "S",
+      //   },
+      //   {
+      //     field2: 2,
+      //     field3: "A",
+      //   },
+      //   {
+      //     field2: 1,
+      //     field3: "S",
+      //   },
+      //   {
+      //     field2: 3,
+      //     field3: "S",
+      //   },
+      //   {
+      //     field2: 1,
+      //     field3: "A",
+      //   },
+      //   {
+      //     field2: 5,
+      //     field3: "S",
+      //   },
+      //   {
+      //     field2: 5,
+      //     field3: "A",
+      //   },
+      // ];
+
+      // arrayBaru = [];
+      // datatable.forEach((element) => {
+      //   nilaiBaru = `Field1 dengan Field2 = ${element.field3}`;
+      //   arrayBaru.push(nilaiBaru);
+      // });
+      // console.log(arrayBaru);
+    </script>
+    <script>
+      function kombinasiPalindrome() {
+        let angka = prompt("Masukkan angka: ");
+        // console.log(parseInt(angka));
+        // kemungkinanKombinasi = [];
+        // if (angka <= 9 && angka > 0) {
+        //   kemungkinanKombinasi.push(angka);
+        //   console.log(
+        //     "kemungkinan kombinasi palindrome:" + kemungkinanKombinasi
+        //   );
+        // }
+        kemungkinanKombinasi = [];
+        for (let i = 0; i < angka.length; i++) {
+          kemungkinanKombinasi.push(angka[i]);
+        }
+        for (let j = 0; j < kemungkinanKombinasi.length; j++) {
+          indexTerakhir = kemungkinanKombinasi.length - 1;
+          kemungkinanKombinasi.sort();
+          kemungkinanKombinasi.splice(
+            0,
+            0,
+            kemungkinanKombinasi[indexTerakhir]
+          );
+          kemungkinanKombinasi.pop();
+          console.log(kemungkinanKombinasi);
+        }
+      }
+
+      kombinasiPalindrome();
+      // var arr = [];
+      // arr[0] = "Jani";
+      // arr[1] = "Hege";
+      // arr[2] = "Stale";
+      // arr[3] = "Kai Jim";
+      // arr[4] = "Borge";
+
+      // console.log(arr.join());
+      // arr.splice(2, 0, "Lene");
+      // console.log(arr.join());
+    </script>
+  </body>
+</html>
